@@ -488,13 +488,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okm-Eq-VIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.81159420289862" y="124.55357142857142"/>
+            <point key="canvasLocation" x="994" y="125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jKd-Ja-T7J">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WGj-RN-PaB" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="kQi-dd-BHV"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1fo-7l-eWv">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -502,11 +503,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="RtV-z0-Wok" kind="relationship" relationship="viewControllers" id="pfb-8S-kdp"/>
+                        <segue destination="uNc-Ju-7rh" kind="relationship" relationship="viewControllers" id="UlG-Xa-oQA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnZ-bm-e89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="66.666666666666671" y="124.55357142857142"/>
+            <point key="canvasLocation" x="54" y="125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ENr-Tj-aa7">
@@ -748,9 +750,69 @@
             </objects>
             <point key="canvasLocation" x="4977" y="-522"/>
         </scene>
+        <!--Kaguya-->
+        <scene sceneID="Tne-zo-5k7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uNc-Ju-7rh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Kaguya" image="airplane" catalog="system" selectedImage="car" id="Ry6-mV-kUd"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="zSe-PL-ICx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kUH-ju-VJg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dWE-bx-cTY" kind="relationship" relationship="rootViewController" id="WRh-uF-4TN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Boh-K0-hCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="921"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="G8W-3W-nPy">
+            <objects>
+                <viewController id="dWE-bx-cTY" customClass="ViewController" customModule="EBookExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j2D-HR-cln">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP5-Xc-vZ8">
+                                <rect key="frame" x="20" y="121" width="196" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.85239190919999996" blue="0.19467037670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="zEF-Hu-blV" kind="show" destinationCreationSelector="showSwiftUIView:" id="3Pj-S7-SYN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mDf-EJ-i1f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hXK-lM-aXV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XgE-oi-0w7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886.9565217391305" y="920.75892857142856"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="Aqj-Si-0Ma">
+            <objects>
+                <hostingController id="zEF-Hu-blV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Dav-Uz-TOs"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eq7-Fm-Tk7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2699" y="921"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="airplane" catalog="system" width="128" height="115"/>
         <image name="all" width="1005" height="1020"/>
+        <image name="car" catalog="system" width="128" height="93"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="fubuki" width="500" height="500"/>
         <image name="holo" width="300" height="85"/>
