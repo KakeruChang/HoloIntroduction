@@ -14,9 +14,5 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
-    
-    @IBSegueAction func showSwiftUIView(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: SwiftUIView())
-    }
 }
 
