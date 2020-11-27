@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		989B8D0A256A07A3005C3661 /* DrawMentori.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D09256A07A3005C3661 /* DrawMentori.swift */; };
+		989B8D11256A1054005C3661 /* SwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D10256A1054005C3661 /* SwiftUIViewController.swift */; };
+		989B8D17256BA1CB005C3661 /* DrawChika.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D16256BA1CA005C3661 /* DrawChika.swift */; };
+		989B8D1B256F941A005C3661 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D1A256F941A005C3661 /* BMIViewController.swift */; };
+		989B8D1F256FAC31005C3661 /* ResultBMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D1E256FAC31005C3661 /* ResultBMIViewController.swift */; };
+		989B8D252570EC85005C3661 /* PeopleInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D242570EC85005C3661 /* PeopleInformation.swift */; };
 		98A264DA255944DE0095A7C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A264D9255944DE0095A7C9 /* AppDelegate.swift */; };
 		98A264DC255944DE0095A7C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A264DB255944DE0095A7C9 /* SceneDelegate.swift */; };
 		98A264DE255944DE0095A7C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A264DD255944DE0095A7C9 /* ViewController.swift */; };
 		98A264E1255944DE0095A7C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A264DF255944DE0095A7C9 /* Main.storyboard */; };
 		98A264E3255944DE0095A7C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A264E2255944DE0095A7C9 /* Assets.xcassets */; };
 		98A264E6255944DE0095A7C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A264E4255944DE0095A7C9 /* LaunchScreen.storyboard */; };
+		98ABC0922561F02B00A23C04 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ABC0912561F02B00A23C04 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		989B8D09256A07A3005C3661 /* DrawMentori.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawMentori.swift; sourceTree = "<group>"; };
+		989B8D10256A1054005C3661 /* SwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewController.swift; sourceTree = "<group>"; };
+		989B8D16256BA1CA005C3661 /* DrawChika.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawChika.swift; sourceTree = "<group>"; };
+		989B8D1A256F941A005C3661 /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
+		989B8D1E256FAC31005C3661 /* ResultBMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBMIViewController.swift; sourceTree = "<group>"; };
+		989B8D242570EC85005C3661 /* PeopleInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInformation.swift; sourceTree = "<group>"; };
 		98A264D6255944DE0095A7C9 /* EBookExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EBookExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A264D9255944DE0095A7C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98A264DB255944DE0095A7C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +37,7 @@
 		98A264E2255944DE0095A7C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98A264E5255944DE0095A7C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98A264E7255944DE0095A7C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98ABC0912561F02B00A23C04 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; tabWidth = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		989B8D0F256A0FA1005C3661 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				98A264DD255944DE0095A7C9 /* ViewController.swift */,
+				989B8D10256A1054005C3661 /* SwiftUIViewController.swift */,
+				989B8D1A256F941A005C3661 /* BMIViewController.swift */,
+				989B8D1E256FAC31005C3661 /* ResultBMIViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		989B8D232570EC64005C3661 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				989B8D242570EC85005C3661 /* PeopleInformation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		98A264CD255944DD0095A7C9 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +89,27 @@
 		98A264D8255944DE0095A7C9 /* EBookExample */ = {
 			isa = PBXGroup;
 			children = (
+				989B8D232570EC64005C3661 /* Model */,
+				989B8D0F256A0FA1005C3661 /* Controllers */,
+				98ABC0882561EDAC00A23C04 /* View */,
 				98A264D9255944DE0095A7C9 /* AppDelegate.swift */,
 				98A264DB255944DE0095A7C9 /* SceneDelegate.swift */,
-				98A264DD255944DE0095A7C9 /* ViewController.swift */,
-				98A264DF255944DE0095A7C9 /* Main.storyboard */,
 				98A264E2255944DE0095A7C9 /* Assets.xcassets */,
 				98A264E4255944DE0095A7C9 /* LaunchScreen.storyboard */,
 				98A264E7255944DE0095A7C9 /* Info.plist */,
 			);
 			path = EBookExample;
+			sourceTree = "<group>";
+		};
+		98ABC0882561EDAC00A23C04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98A264DF255944DE0095A7C9 /* Main.storyboard */,
+				98ABC0912561F02B00A23C04 /* SwiftUIView.swift */,
+				989B8D09256A07A3005C3661 /* DrawMentori.swift */,
+				989B8D16256BA1CA005C3661 /* DrawChika.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +182,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				989B8D17256BA1CB005C3661 /* DrawChika.swift in Sources */,
+				989B8D252570EC85005C3661 /* PeopleInformation.swift in Sources */,
+				989B8D1F256FAC31005C3661 /* ResultBMIViewController.swift in Sources */,
+				989B8D1B256F941A005C3661 /* BMIViewController.swift in Sources */,
+				989B8D11256A1054005C3661 /* SwiftUIViewController.swift in Sources */,
+				989B8D0A256A07A3005C3661 /* DrawMentori.swift in Sources */,
 				98A264DE255944DE0095A7C9 /* ViewController.swift in Sources */,
 				98A264DA255944DE0095A7C9 /* AppDelegate.swift in Sources */,
+				98ABC0922561F02B00A23C04 /* SwiftUIView.swift in Sources */,
 				98A264DC255944DE0095A7C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
