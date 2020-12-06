@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9848E645257A2E770015107D /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9848E644257A2E770015107D /* CurrencyViewController.swift */; };
+		9848E648257A96CA0015107D /* CurrencyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9848E647257A96CA0015107D /* CurrencyInfo.swift */; };
 		989B8D0A256A07A3005C3661 /* DrawMentori.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D09256A07A3005C3661 /* DrawMentori.swift */; };
 		989B8D11256A1054005C3661 /* SwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D10256A1054005C3661 /* SwiftUIViewController.swift */; };
 		989B8D17256BA1CB005C3661 /* DrawChika.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D16256BA1CA005C3661 /* DrawChika.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9848E644257A2E770015107D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		9848E647257A96CA0015107D /* CurrencyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInfo.swift; sourceTree = "<group>"; };
 		989B8D09256A07A3005C3661 /* DrawMentori.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawMentori.swift; sourceTree = "<group>"; };
 		989B8D10256A1054005C3661 /* SwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewController.swift; sourceTree = "<group>"; };
 		989B8D16256BA1CA005C3661 /* DrawChika.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawChika.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 				989B8D10256A1054005C3661 /* SwiftUIViewController.swift */,
 				989B8D1A256F941A005C3661 /* BMIViewController.swift */,
 				989B8D1E256FAC31005C3661 /* ResultBMIViewController.swift */,
+				9848E644257A2E770015107D /* CurrencyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -66,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				989B8D242570EC85005C3661 /* PeopleInformation.swift */,
+				9848E647257A96CA0015107D /* CurrencyInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9848E648257A96CA0015107D /* CurrencyInfo.swift in Sources */,
 				989B8D17256BA1CB005C3661 /* DrawChika.swift in Sources */,
 				989B8D252570EC85005C3661 /* PeopleInformation.swift in Sources */,
 				989B8D1F256FAC31005C3661 /* ResultBMIViewController.swift in Sources */,
@@ -191,6 +198,7 @@
 				98A264DE255944DE0095A7C9 /* ViewController.swift in Sources */,
 				98A264DA255944DE0095A7C9 /* AppDelegate.swift in Sources */,
 				98ABC0922561F02B00A23C04 /* SwiftUIView.swift in Sources */,
+				9848E645257A2E770015107D /* CurrencyViewController.swift in Sources */,
 				98A264DC255944DE0095A7C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
