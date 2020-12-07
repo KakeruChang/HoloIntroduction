@@ -64,7 +64,9 @@ extension CurrencyViewController: CurrencyInfoDelegate {
         DispatchQueue.main.async { [self] in
             if currencyData.rates.count > 1 {
                 var newList: [Currency] = []
-                for (index,item) in currencyData.rates.enumerated() {
+                for (index,item) in currencyData.rates.sorted(by: { (a, b) -> Bool in
+                    return a.key < b.key
+                }).enumerated() {
                     if index == 0 {
                         let firstValue = "1 \(item.key)"
                         currency2FromLabel.text = firstValue
