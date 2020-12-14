@@ -62,7 +62,7 @@ struct CurrencyInfo {
                     
                 }
             }
-            
+ 
             // 4. start the task
             task.resume()
             

@@ -1,0 +1,6 @@
+framework module Pods_EBookExample {
+  umbrella header "Pods-EBookExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
