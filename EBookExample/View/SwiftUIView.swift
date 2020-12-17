@@ -34,6 +34,30 @@ struct DrawView: UIViewRepresentable {
         // remove old layer
         uiView.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
         
+        
+        let messageLine = UIBezierPath()
+        messageLine.move(to: CGPoint(x: 35, y: 0))
+        messageLine.addQuadCurve(to: CGPoint(x: 15, y: 20), controlPoint: CGPoint(x: 15, y: 0))
+        messageLine.addQuadCurve(to: CGPoint(x: 35, y: 40), controlPoint: CGPoint(x: 15, y: 40))
+        let messageLayer = CAShapeLayer()
+        messageLayer.path = messageLine.cgPath
+        messageLayer.strokeColor = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
+        messageLayer.fillColor = CGColor(srgbRed: 239/255, green: 239/255, blue: 239/255, alpha: imgOpacity)
+        messageLayer.lineWidth = 0
+        uiView.layer.addSublayer(messageLayer)
+        
+        let angleLine = UIBezierPath()
+        angleLine.move(to: CGPoint(x: 0, y: 0))
+        
+        angleLine.addQuadCurve(to: CGPoint(x: 20, y: 10), controlPoint: CGPoint(x: 10, y: 10))
+        angleLine.addLine(to: CGPoint(x: 20, y: 20))
+        angleLine.addQuadCurve(to: CGPoint(x: 0, y: 0), controlPoint: CGPoint(x: 10, y: 20))
+        
+        let angleLayer = CAShapeLayer()
+        angleLayer.path = angleLine.cgPath
+        angleLayer.fillColor = CGColor(srgbRed: 239/255, green: 239/255, blue: 239/255, alpha: imgOpacity)
+        uiView.layer.addSublayer(angleLayer)
+        
         if imgName == "mentori" {
             DrawMentori(uiView: uiView, red: mainColorWithoutOpacity.red, green: mainColorWithoutOpacity.green, blue: mainColorWithoutOpacity.blue, device: device, imgOpacity: imgOpacity)
         }

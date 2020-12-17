@@ -3,16 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		98281BA2257F20630051CA54 /* ChatSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98281BA1257F20630051CA54 /* ChatSignUpViewController.swift */; };
 		98281BA5257F208B0051CA54 /* ChatLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98281BA4257F208B0051CA54 /* ChatLogInViewController.swift */; };
 		98281BA9258115F90051CA54 /* ChatMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98281BA8258115F90051CA54 /* ChatMainViewController.swift */; };
+		983DB943258A5D770017DAB4 /* DrawMessageAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983DB942258A5D770017DAB4 /* DrawMessageAngle.swift */; };
 		9848E645257A2E770015107D /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9848E644257A2E770015107D /* CurrencyViewController.swift */; };
 		9848E648257A96CA0015107D /* CurrencyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9848E647257A96CA0015107D /* CurrencyInfo.swift */; };
 		9848E656257F11B10015107D /* ChatHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9848E655257F11B00015107D /* ChatHomeViewController.swift */; };
+		9852432B25870A3100FC6443 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9852432A25870A3100FC6443 /* Message.swift */; };
+		9857819225884E4600D6E3C4 /* MessageSelfTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9857819025884E4600D6E3C4 /* MessageSelfTextCell.swift */; };
+		9857819325884E4600D6E3C4 /* MessageSelfTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9857819125884E4600D6E3C4 /* MessageSelfTextCell.xib */; };
+		989943D02589AEC3001D9980 /* MessageOtherTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989943CE2589AEC3001D9980 /* MessageOtherTextCell.swift */; };
+		989943D12589AEC3001D9980 /* MessageOtherTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 989943CF2589AEC3001D9980 /* MessageOtherTextCell.xib */; };
 		989B8D0A256A07A3005C3661 /* DrawMentori.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D09256A07A3005C3661 /* DrawMentori.swift */; };
 		989B8D11256A1054005C3661 /* SwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D10256A1054005C3661 /* SwiftUIViewController.swift */; };
 		989B8D17256BA1CB005C3661 /* DrawChika.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B8D16256BA1CA005C3661 /* DrawChika.swift */; };
@@ -36,9 +42,15 @@
 		98281BA1257F20630051CA54 /* ChatSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSignUpViewController.swift; sourceTree = "<group>"; };
 		98281BA4257F208B0051CA54 /* ChatLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogInViewController.swift; sourceTree = "<group>"; };
 		98281BA8258115F90051CA54 /* ChatMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMainViewController.swift; sourceTree = "<group>"; };
+		983DB942258A5D770017DAB4 /* DrawMessageAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawMessageAngle.swift; sourceTree = "<group>"; };
 		9848E644257A2E770015107D /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 		9848E647257A96CA0015107D /* CurrencyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInfo.swift; sourceTree = "<group>"; };
 		9848E655257F11B00015107D /* ChatHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHomeViewController.swift; sourceTree = "<group>"; };
+		9852432A25870A3100FC6443 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9857819025884E4600D6E3C4 /* MessageSelfTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSelfTextCell.swift; sourceTree = "<group>"; };
+		9857819125884E4600D6E3C4 /* MessageSelfTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSelfTextCell.xib; sourceTree = "<group>"; };
+		989943CE2589AEC3001D9980 /* MessageOtherTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageOtherTextCell.swift; sourceTree = "<group>"; };
+		989943CF2589AEC3001D9980 /* MessageOtherTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageOtherTextCell.xib; sourceTree = "<group>"; };
 		989B8D09256A07A3005C3661 /* DrawMentori.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawMentori.swift; sourceTree = "<group>"; };
 		989B8D10256A1054005C3661 /* SwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewController.swift; sourceTree = "<group>"; };
 		989B8D16256BA1CA005C3661 /* DrawChika.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawChika.swift; sourceTree = "<group>"; };
@@ -89,6 +101,18 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		9852433225884B8E00FC6443 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9857819025884E4600D6E3C4 /* MessageSelfTextCell.swift */,
+				9857819125884E4600D6E3C4 /* MessageSelfTextCell.xib */,
+				989943CE2589AEC3001D9980 /* MessageOtherTextCell.swift */,
+				989943CF2589AEC3001D9980 /* MessageOtherTextCell.xib */,
+				983DB942258A5D770017DAB4 /* DrawMessageAngle.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		989B8D0F256A0FA1005C3661 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +131,7 @@
 			children = (
 				989B8D242570EC85005C3661 /* PeopleInformation.swift */,
 				9848E647257A96CA0015107D /* CurrencyInfo.swift */,
+				9852432A25870A3100FC6443 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +173,7 @@
 		98ABC0882561EDAC00A23C04 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9852433225884B8E00FC6443 /* Cell */,
 				98A264DF255944DE0095A7C9 /* Main.storyboard */,
 				98ABC0912561F02B00A23C04 /* SwiftUIView.swift */,
 				989B8D09256A07A3005C3661 /* DrawMentori.swift */,
@@ -227,6 +253,8 @@
 				98A264E6255944DE0095A7C9 /* LaunchScreen.storyboard in Resources */,
 				98EB773F2584707D006A6086 /* GoogleService-Info.plist in Resources */,
 				98A264E3255944DE0095A7C9 /* Assets.xcassets in Resources */,
+				989943D12589AEC3001D9980 /* MessageOtherTextCell.xib in Resources */,
+				9857819325884E4600D6E3C4 /* MessageSelfTextCell.xib in Resources */,
 				98A264E1255944DE0095A7C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +310,11 @@
 			files = (
 				9848E648257A96CA0015107D /* CurrencyInfo.swift in Sources */,
 				989B8D17256BA1CB005C3661 /* DrawChika.swift in Sources */,
+				9857819225884E4600D6E3C4 /* MessageSelfTextCell.swift in Sources */,
+				983DB943258A5D770017DAB4 /* DrawMessageAngle.swift in Sources */,
+				989943D02589AEC3001D9980 /* MessageOtherTextCell.swift in Sources */,
 				989B8D252570EC85005C3661 /* PeopleInformation.swift in Sources */,
+				9852432B25870A3100FC6443 /* Message.swift in Sources */,
 				989B8D1F256FAC31005C3661 /* ResultBMIViewController.swift in Sources */,
 				98281BA5257F208B0051CA54 /* ChatLogInViewController.swift in Sources */,
 				989B8D1B256F941A005C3661 /* BMIViewController.swift in Sources */,
