@@ -9,15 +9,29 @@ import UIKit
 
 class MessageSelfTextCell: UITableViewCell {
     
-    @IBOutlet weak var messageBubble: UIView!
+    @IBOutlet weak var messageBubble: UIControl!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var messageWrapper: UIView!
-    
+
     var trigger = false
     var isSelf = true
     var bubbleColor = UIColor(red: 47/255, green: 124/255, blue: 246/255, alpha: 1).cgColor
+    var bubbleDeepColor = UIColor(red: 47/255, green: 100/255, blue: 246/255, alpha: 1).cgColor
     
+    @IBAction func messageIsClicking(_ sender: UIControl) {
+        messageBubble.layer.backgroundColor = bubbleDeepColor
+        drawMessageAngle(messageBubble: messageBubble, isSelf: isSelf, bubbleColor: bubbleDeepColor)
+    }
+    
+    @IBAction func messageIsClicked(_ sender: UIControl) {
+        messageBubble.layer.backgroundColor = bubbleColor
+        drawMessageAngle(messageBubble: messageBubble, isSelf: isSelf, bubbleColor: bubbleColor)
+        
+        if let text = messageLabel.text {
+            print(text)
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,7 +50,6 @@ class MessageSelfTextCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
-        messageWrapper.layer.backgroundColor = UIColor.systemBackground.cgColor
     }
     
 }

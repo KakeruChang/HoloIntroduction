@@ -9,6 +9,9 @@ import UIKit
 
 func drawMessageAngle(messageBubble: UIView, isSelf: Bool, bubbleColor: CGColor) {
     
+    // remove old angle
+    messageBubble.layer.sublayers?.forEach { if $0.name == "messageBubbleAngle" { $0.removeFromSuperlayer() } }
+    
     let bubbleWidth = messageBubble.frame.width
     var basePoint: CGFloat
     var displacement: CGFloat
@@ -30,7 +33,10 @@ func drawMessageAngle(messageBubble: UIView, isSelf: Bool, bubbleColor: CGColor)
     let messageAngleLayer = CAShapeLayer()
     messageAngleLayer.path = bezierPath.cgPath
     messageAngleLayer.fillColor = bubbleColor
+    messageAngleLayer.name = "messageBubbleAngle"
     
     messageBubble.layer.addSublayer(messageAngleLayer)
+    
+    
     
 }
