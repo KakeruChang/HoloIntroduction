@@ -26,16 +26,15 @@ class ChatLogInViewController: UIViewController {
     @IBAction func loginPressed(_ sender: UIButton) {
         
         if let account = accountTexttField.text, let password = passwordTexttField.text {
-            performSegue(withIdentifier: "LoginToChat", sender: self)
-//            Auth.auth().signIn(withEmail: account, password: password) { authResult, error in
-//
-//                if let error = error {
-//                    print(error.localizedDescription)
-//                } else {
-//                    // guard let strongSelf = self else { return }
-//                    self.performSegue(withIdentifier: "LoginToChat", sender: self)
-//                }
-//            }
+            Auth.auth().signIn(withEmail: account, password: password) { authResult, error in
+
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    // guard let strongSelf = self else { return }
+                    self.performSegue(withIdentifier: "LoginToChat", sender: self)
+                }
+            }
         }
     }
     

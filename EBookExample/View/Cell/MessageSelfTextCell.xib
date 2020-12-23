@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sot-f7-C5E">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sot-f7-C5E" customClass="UIControl">
                         <rect key="frame" x="235.5" y="10" width="64.5" height="87"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZS-tJ-p77">
@@ -33,17 +33,23 @@
                             <constraint firstItem="yZS-tJ-p77" firstAttribute="top" secondItem="Sot-f7-C5E" secondAttribute="top" constant="10" id="q6b-16-jwA"/>
                             <constraint firstItem="yZS-tJ-p77" firstAttribute="leading" secondItem="Sot-f7-C5E" secondAttribute="leading" constant="10" id="tff-3z-g2k"/>
                         </constraints>
+                        <connections>
+                            <action selector="messageIsClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3jl-aa-exz"/>
+                            <action selector="messageIsClicking:" destination="KGk-i7-Jjw" eventType="touchDown" id="lrH-Iv-s6Y"/>
+                        </connections>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下午 11:45" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH3-kU-Vch">
-                        <rect key="frame" x="167.5" y="82.5" width="58" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下午 11:45" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH3-kU-Vch">
+                        <rect key="frame" x="170.5" y="82.5" width="60" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="wKw-XO-IZ4"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Sot-f7-C5E" firstAttribute="leading" secondItem="zH3-kU-Vch" secondAttribute="trailing" constant="10" id="6kc-PL-T5b"/>
-                    <constraint firstItem="Sot-f7-C5E" firstAttribute="leading" secondItem="zH3-kU-Vch" secondAttribute="trailing" constant="10" id="AeF-Cq-Pcx"/>
+                    <constraint firstItem="Sot-f7-C5E" firstAttribute="leading" secondItem="zH3-kU-Vch" secondAttribute="trailing" constant="5" id="AeF-Cq-Pcx"/>
                     <constraint firstItem="Sot-f7-C5E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="GZ4-J7-mcL"/>
                     <constraint firstItem="zH3-kU-Vch" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="KBf-50-yJT"/>
                     <constraint firstAttribute="trailing" secondItem="Sot-f7-C5E" secondAttribute="trailing" constant="20" id="Rui-T6-UZp"/>
@@ -53,9 +59,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="messageBubble" destination="Sot-f7-C5E" id="htf-J8-VDs"/>
+                <outlet property="messageBubble" destination="Sot-f7-C5E" id="aro-E5-0Ns"/>
                 <outlet property="messageLabel" destination="yZS-tJ-p77" id="uoY-fa-HIc"/>
-                <outlet property="messageWrapper" destination="H2p-sc-9uM" id="hQm-io-rPy"/>
                 <outlet property="timeLabel" destination="zH3-kU-Vch" id="gcy-sn-hTr"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="121.54017857142857"/>
