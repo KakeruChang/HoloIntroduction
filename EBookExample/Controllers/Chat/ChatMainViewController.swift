@@ -40,53 +40,21 @@ class ChatMainViewController: UIViewController {
         
         messageTableView.register(UINib(nibName: "MessageSelfTextCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         messageTableView.register(UINib(nibName: "MessageOtherTextCell", bundle: nil), forCellReuseIdentifier: "ReusableCellOther")
+        // cell made by code only
+        messageTableView.register(MessageGoodImgCell.self, forCellReuseIdentifier: "ReusableGoodImgCell")
         
-        loadMessages()
-    }
-    
-    func loadMessages(){
-        
-        db.collection("messages").order(by: "time").addSnapshotListener { (querySnapshot, error) in
-            self.messages = []
-            
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                if let snapshotDocument = querySnapshot?.documents {
-                    for doc in snapshotDocument {
-                        let data = doc.data()
-                        
-                        if let account = data["account"] as? String, let message = data["message"] as? String, let timestamp = data["time"] as? Timestamp {
-                            let time = timestamp.dateValue()
-                            let newMessage = Message(sender: account, content: message, time: time)
-                            
-                            self.messages.append(newMessage)
-                            
-                            DispatchQueue.main.async {
-                                self.messageTableView.reloadData()
-                                
-                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                                self.messageTableView.scrollToRow(at: indexPath, at: .top, animated: false)
-                            }
-                            
-                        } else {
-                            print("sth wrong")
-                        }
-                        
-                    }
-                }
-            }
-        }
-        
+        loadMessages(chatMainViewController: self)
     }
     
     @IBAction func sendMessage(_ sender: UIControl) {
-        if let messageBody = messageInput.text, let account = Auth.auth().currentUser?.email {
+        if let account = Auth.auth().currentUser?.email {
             
             let time = Date()
             
-            if messageBody.count > 0 {
-                db.collection("messages").addDocument(data: ["account": account, "message": messageBody, "time": time]) { (error) in
+            if let messageBody = messageInput.text, messageBody.count > 0 {
+                sendMessageToFirebase(account, messageBody, time, chatMainViewController: self)
+            } else {
+                db.collection("messages").addDocument(data: ["account": account, "message": "", "time": time,"img": "good"]) { (error) in
                     if let error = error {
                         print(error.localizedDescription)
                     } else {
@@ -96,6 +64,7 @@ class ChatMainViewController: UIViewController {
                     }
                 }
             }
+            
             
         }
     }
@@ -136,22 +105,36 @@ extension ChatMainViewController: UITableViewDataSource {
             testResult = true
         }
         
+        if let img = messages[indexPath.row].img, img == "good" {
+            let goodCell = tableView.dequeueReusableCell(withIdentifier: "ReusableGoodImgCell", for: indexPath) as! MessageGoodImgCell
+            goodCell.timeLabel.text = messages[indexPath.row].getMessageTimeString()
+            goodCell.contentView.layoutIfNeeded()
+            print("goodCell")
+            return goodCell
+        }
+        
         if testResult == true {
             // self bubble
             let selfCell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MessageSelfTextCell
             selfCell.messageLabel.text = messages[indexPath.row].content
             selfCell.timeLabel.text = messages[indexPath.row].getMessageTimeString()
             selfCell.contentView.layoutIfNeeded()
-            
+            print("selfCell")
             return selfCell
+//            // self bubble
+//            let selfCell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MessageSelfTextCell
+//            selfCell.messageLabel.text = messages[indexPath.row].content
+//            selfCell.timeLabel.text = messages[indexPath.row].getMessageTimeString()
+//            selfCell.contentView.layoutIfNeeded()
+//
+//            return selfCell
         }
-        
         // other bubble
         let otherCell = tableView.dequeueReusableCell(withIdentifier: "ReusableCellOther", for: indexPath) as! MessageOtherTextCell
         otherCell.messageLabel.text = messages[indexPath.row].content
         otherCell.timeLabel.text = messages[indexPath.row].getMessageTimeString()
         otherCell.contentView.layoutIfNeeded()
-        
+        print("otherCell")
         return otherCell
     }
 }
@@ -191,7 +174,6 @@ extension ChatMainViewController {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
             let tabbarHeight = messageWrapper.safeAreaInsets.bottom
-            
             
             messageWrapper.frame.origin.y = -keyboardHeight
             textfieldBottomConstraints.constant = tabbarHeight
