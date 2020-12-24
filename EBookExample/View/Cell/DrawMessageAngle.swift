@@ -40,3 +40,4 @@ func drawMessageAngle(messageBubble: UIView, isSelf: Bool, bubbleColor: CGColor)
     
     
 }
+

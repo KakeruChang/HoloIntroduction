@@ -14,7 +14,7 @@ struct Message {
     let time: Date
     let bgColor: UIColor? = nil
     let textColor: UIColor? = nil
-    let img: String? = nil
+    var img: String?
     
     func getMessageTimeString()-> String {
         let calendar = Calendar.current
