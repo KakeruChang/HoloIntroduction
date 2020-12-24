@@ -100,41 +100,35 @@ extension ChatMainViewController: UITableViewDataSource {
     // MessageTableViewCell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // decide self or other
-        var testResult = false
-        if indexPath.row % 2 == 0 {
-            testResult = true
-        }
+        var isSelf = false
         
+        if messages[indexPath.row].sender == Auth.auth().currentUser?.email {
+            isSelf = true
+        }
+
+        // press good
         if let img = messages[indexPath.row].img, img == "good" {
             let goodCell = tableView.dequeueReusableCell(withIdentifier: "ReusableGoodImgCell", for: indexPath) as! MessageGoodImgCell
             goodCell.timeLabel.text = messages[indexPath.row].getMessageTimeString()
-            goodCell.contentView.layoutIfNeeded()
-            print("goodCell")
+            goodCell.isSelf = isSelf
+ 
             return goodCell
         }
         
-        if testResult == true {
+        if isSelf == true {
+
             // self bubble
             let selfCell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MessageSelfTextCell
             selfCell.messageLabel.text = messages[indexPath.row].content
             selfCell.timeLabel.text = messages[indexPath.row].getMessageTimeString()
-            selfCell.contentView.layoutIfNeeded()
-            print("selfCell")
+
             return selfCell
-//            // self bubble
-//            let selfCell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MessageSelfTextCell
-//            selfCell.messageLabel.text = messages[indexPath.row].content
-//            selfCell.timeLabel.text = messages[indexPath.row].getMessageTimeString()
-//            selfCell.contentView.layoutIfNeeded()
-//
-//            return selfCell
         }
         // other bubble
         let otherCell = tableView.dequeueReusableCell(withIdentifier: "ReusableCellOther", for: indexPath) as! MessageOtherTextCell
         otherCell.messageLabel.text = messages[indexPath.row].content
         otherCell.timeLabel.text = messages[indexPath.row].getMessageTimeString()
-        otherCell.contentView.layoutIfNeeded()
-        print("otherCell")
+
         return otherCell
     }
 }
