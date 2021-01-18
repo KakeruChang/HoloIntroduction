@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981CFD2F25A1CAAA00CAB82E /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CFD2E25A1CAAA00CAB82E /* CategoryViewController.swift */; };
+		981CFD4B25AE96D700CAB82E /* ItemRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CFD4A25AE96D700CAB82E /* ItemRealm.swift */; };
+		981CFD4E25AE96F200CAB82E /* CategoryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CFD4D25AE96F200CAB82E /* CategoryRealm.swift */; };
 		98281BA2257F20630051CA54 /* ChatSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98281BA1257F20630051CA54 /* ChatSignUpViewController.swift */; };
 		98281BA5257F208B0051CA54 /* ChatLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98281BA4257F208B0051CA54 /* ChatLogInViewController.swift */; };
 		98281BA9258115F90051CA54 /* ChatMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98281BA8258115F90051CA54 /* ChatMainViewController.swift */; };
@@ -33,6 +36,8 @@
 		98A264E6255944DE0095A7C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A264E4255944DE0095A7C9 /* LaunchScreen.storyboard */; };
 		98A66E882592EC1F003A6340 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A66E872592EC1F003A6340 /* Firebase.swift */; };
 		98A66E9A25938C1A003A6340 /* MessageGoodImgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A66E9925938C1A003A6340 /* MessageGoodImgCell.swift */; };
+		98A66ECA2598E5BD003A6340 /* ToDoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A66EC92598E5BC003A6340 /* ToDoListTableViewController.swift */; };
+		98A66ED1259D9C2C003A6340 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98A66ECF259D9C2C003A6340 /* DataModel.xcdatamodeld */; };
 		98ABC0922561F02B00A23C04 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ABC0912561F02B00A23C04 /* SwiftUIView.swift */; };
 		98EB773F2584707D006A6086 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98EB773E2584707D006A6086 /* GoogleService-Info.plist */; };
 		DB290A44B66DE4304E1E49FB /* Pods_EBookExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A21F55DF29EF1C401CAE7B /* Pods_EBookExample.framework */; };
@@ -41,6 +46,9 @@
 /* Begin PBXFileReference section */
 		036D703D5E4A4722815C0D99 /* Pods-EBookExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBookExample.debug.xcconfig"; path = "Target Support Files/Pods-EBookExample/Pods-EBookExample.debug.xcconfig"; sourceTree = "<group>"; };
 		96E71A4FCE24309332F30049 /* Pods-EBookExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBookExample.release.xcconfig"; path = "Target Support Files/Pods-EBookExample/Pods-EBookExample.release.xcconfig"; sourceTree = "<group>"; };
+		981CFD2E25A1CAAA00CAB82E /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		981CFD4A25AE96D700CAB82E /* ItemRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRealm.swift; sourceTree = "<group>"; };
+		981CFD4D25AE96F200CAB82E /* CategoryRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRealm.swift; sourceTree = "<group>"; };
 		98281BA1257F20630051CA54 /* ChatSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSignUpViewController.swift; sourceTree = "<group>"; };
 		98281BA4257F208B0051CA54 /* ChatLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogInViewController.swift; sourceTree = "<group>"; };
 		98281BA8258115F90051CA54 /* ChatMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMainViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +77,8 @@
 		98A264E7255944DE0095A7C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98A66E872592EC1F003A6340 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		98A66E9925938C1A003A6340 /* MessageGoodImgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageGoodImgCell.swift; sourceTree = "<group>"; };
+		98A66EC92598E5BC003A6340 /* ToDoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewController.swift; sourceTree = "<group>"; };
+		98A66ED0259D9C2C003A6340 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		98ABC0912561F02B00A23C04 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		98EB773E2584707D006A6086 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3A21F55DF29EF1C401CAE7B /* Pods_EBookExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EBookExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +131,7 @@
 		989B8D0F256A0FA1005C3661 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				98A66EC82598E548003A6340 /* ToDo */,
 				9848E654257F11740015107D /* Chat */,
 				98A264DD255944DE0095A7C9 /* ViewController.swift */,
 				989B8D10256A1054005C3661 /* SwiftUIViewController.swift */,
@@ -138,6 +149,9 @@
 				9848E647257A96CA0015107D /* CurrencyInfo.swift */,
 				9852432A25870A3100FC6443 /* Message.swift */,
 				98A66E872592EC1F003A6340 /* Firebase.swift */,
+				98A66ECF259D9C2C003A6340 /* DataModel.xcdatamodeld */,
+				981CFD4A25AE96D700CAB82E /* ItemRealm.swift */,
+				981CFD4D25AE96F200CAB82E /* CategoryRealm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +188,15 @@
 				98EB773E2584707D006A6086 /* GoogleService-Info.plist */,
 			);
 			path = EBookExample;
+			sourceTree = "<group>";
+		};
+		98A66EC82598E548003A6340 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				98A66EC92598E5BC003A6340 /* ToDoListTableViewController.swift */,
+				981CFD2E25A1CAAA00CAB82E /* CategoryViewController.swift */,
+			);
+			path = ToDo;
 			sourceTree = "<group>";
 		};
 		98ABC0882561EDAC00A23C04 /* View */ = {
@@ -323,8 +346,10 @@
 				989B8D252570EC85005C3661 /* PeopleInformation.swift in Sources */,
 				9852432B25870A3100FC6443 /* Message.swift in Sources */,
 				989B8D1F256FAC31005C3661 /* ResultBMIViewController.swift in Sources */,
+				981CFD4E25AE96F200CAB82E /* CategoryRealm.swift in Sources */,
 				98281BA5257F208B0051CA54 /* ChatLogInViewController.swift in Sources */,
 				989B8D1B256F941A005C3661 /* BMIViewController.swift in Sources */,
+				98A66ECA2598E5BD003A6340 /* ToDoListTableViewController.swift in Sources */,
 				989B8D11256A1054005C3661 /* SwiftUIViewController.swift in Sources */,
 				989B8D0A256A07A3005C3661 /* DrawMentori.swift in Sources */,
 				98A264DE255944DE0095A7C9 /* ViewController.swift in Sources */,
@@ -333,9 +358,12 @@
 				98A66E9A25938C1A003A6340 /* MessageGoodImgCell.swift in Sources */,
 				98281BA9258115F90051CA54 /* ChatMainViewController.swift in Sources */,
 				98ABC0922561F02B00A23C04 /* SwiftUIView.swift in Sources */,
+				981CFD2F25A1CAAA00CAB82E /* CategoryViewController.swift in Sources */,
+				98A66ED1259D9C2C003A6340 /* DataModel.xcdatamodeld in Sources */,
 				9848E645257A2E770015107D /* CurrencyViewController.swift in Sources */,
 				9848E656257F11B10015107D /* ChatHomeViewController.swift in Sources */,
 				98A264DC255944DE0095A7C9 /* SceneDelegate.swift in Sources */,
+				981CFD4B25AE96D700CAB82E /* ItemRealm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +567,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		98A66ECF259D9C2C003A6340 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				98A66ED0259D9C2C003A6340 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 98A66ED0259D9C2C003A6340 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 98A264CE255944DD0095A7C9 /* Project object */;
 }
