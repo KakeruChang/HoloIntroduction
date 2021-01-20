@@ -71,8 +71,6 @@ class ToDoListTableViewController: UITableViewController {
             do {
                 try realm.write {
                     item.done = !item.done
-                    // delete
-                    // realm.delete(item)
                 }
             } catch {
                 print("error saving done status\(error)")
