@@ -162,7 +162,7 @@ extension ChatMainViewController {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
-    
+      
     @objc func keyboardWillAppear(_ notification: Notification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
@@ -179,6 +179,7 @@ extension ChatMainViewController {
             
             // add gesture recognizer
             let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+            tap.name = "dismissKeyboard"
             self.messageTableView.addGestureRecognizer(tap)
         }
     }
@@ -190,7 +191,11 @@ extension ChatMainViewController {
         messageWrapper.layoutIfNeeded()
         
         // remove gesture recognizer
-        self.messageTableView.gestureRecognizers?.forEach(self.messageTableView.removeGestureRecognizer)
+        self.messageTableView.gestureRecognizers?.forEach{gesture in
+            if gesture.name == "dismissKeyboard"{
+                self.messageTableView.removeGestureRecognizer(gesture)
+            }
+        }
 
     }
 
