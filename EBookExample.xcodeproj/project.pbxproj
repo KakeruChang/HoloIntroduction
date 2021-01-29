@@ -10,6 +10,7 @@
 		981CFD2F25A1CAAA00CAB82E /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CFD2E25A1CAAA00CAB82E /* CategoryViewController.swift */; };
 		981CFD4B25AE96D700CAB82E /* ItemRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CFD4A25AE96D700CAB82E /* ItemRealm.swift */; };
 		981CFD4E25AE96F200CAB82E /* CategoryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CFD4D25AE96F200CAB82E /* CategoryRealm.swift */; };
+		981CFDA825B6C41900CAB82E /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CFDA725B6C41900CAB82E /* SwipeTableViewController.swift */; };
 		98281BA2257F20630051CA54 /* ChatSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98281BA1257F20630051CA54 /* ChatSignUpViewController.swift */; };
 		98281BA5257F208B0051CA54 /* ChatLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98281BA4257F208B0051CA54 /* ChatLogInViewController.swift */; };
 		98281BA9258115F90051CA54 /* ChatMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98281BA8258115F90051CA54 /* ChatMainViewController.swift */; };
@@ -49,6 +50,7 @@
 		981CFD2E25A1CAAA00CAB82E /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		981CFD4A25AE96D700CAB82E /* ItemRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRealm.swift; sourceTree = "<group>"; };
 		981CFD4D25AE96F200CAB82E /* CategoryRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRealm.swift; sourceTree = "<group>"; };
+		981CFDA725B6C41900CAB82E /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		98281BA1257F20630051CA54 /* ChatSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSignUpViewController.swift; sourceTree = "<group>"; };
 		98281BA4257F208B0051CA54 /* ChatLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogInViewController.swift; sourceTree = "<group>"; };
 		98281BA8258115F90051CA54 /* ChatMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMainViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				98A66EC92598E5BC003A6340 /* ToDoListTableViewController.swift */,
 				981CFD2E25A1CAAA00CAB82E /* CategoryViewController.swift */,
+				981CFDA725B6C41900CAB82E /* SwipeTableViewController.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				981CFD2F25A1CAAA00CAB82E /* CategoryViewController.swift in Sources */,
 				98A66ED1259D9C2C003A6340 /* DataModel.xcdatamodeld in Sources */,
 				9848E645257A2E770015107D /* CurrencyViewController.swift in Sources */,
+				981CFDA825B6C41900CAB82E /* SwipeTableViewController.swift in Sources */,
 				9848E656257F11B10015107D /* ChatHomeViewController.swift in Sources */,
 				98A264DC255944DE0095A7C9 /* SceneDelegate.swift in Sources */,
 				981CFD4B25AE96D700CAB82E /* ItemRealm.swift in Sources */,
