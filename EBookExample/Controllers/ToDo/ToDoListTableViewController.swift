@@ -9,7 +9,8 @@ import UIKit
 import RealmSwift
 // import CoreData
 
-class ToDoListTableViewController: UITableViewController {
+// class ToDoListTableViewController: UITableViewController {
+class ToDoListTableViewController: SwipeTableViewController {
     
     // var itemArray = [ToDoItem]()
     var todoItems: Results<ItemRealm>?
@@ -34,6 +35,53 @@ class ToDoListTableViewController: UITableViewController {
         searchBar.delegate = self
     }
     
+    override func deleteModel(at indexPath: IndexPath) {
+        if let todoItemForDeletion = todoItems?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(todoItemForDeletion)
+                }
+            } catch {
+                print("error deleting todo item: \(error)")
+            }
+            
+        }
+    }
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let todoItemForEdition = todoItems?[indexPath.row] {
+            var textField = UITextField()
+            
+            
+            let alert = UIAlertController(title: "Edit item title", message: "", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Edit Item", style: .default) { (action) in
+                
+                do {
+                    try self.realm.write {
+                        todoItemForEdition.title = textField.text!
+                    }
+                } catch {
+                    print("Edit item fail:\(error)")
+                }
+                
+                
+                self.tableView.reloadData()
+                
+                // self.saveToDoItems()
+            }
+            
+            alert.addTextField { (alertTextField) in
+                alertTextField.text = todoItemForEdition.title
+                
+                textField = alertTextField
+            }
+            alert.addAction(action)
+            
+            present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
     // MARK: - Table view data source
     
     //    override func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,7 +95,8 @@ class ToDoListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        // let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item = todoItems?[indexPath.row] {
             cell.textLabel?.text = item.title
@@ -95,7 +144,7 @@ class ToDoListTableViewController: UITableViewController {
                     try self.realm.write {
                         // let newTodo = ToDoItem(context: self.context)
                         let newTodo = ItemRealm()
-                        newTodo.title = textField.text! // text of textField won;t be empty
+                        newTodo.title = textField.text! // text of textField won't be empty
                         newTodo.dateCreated = Date()
                         
                         // newTodo.parentCategory = self.selectedCategory
@@ -124,7 +173,7 @@ class ToDoListTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    //MARK: - save / load todo item
+    //MARK: - load todo item
     //    func saveToDoItems() {
     //        // let encoder = PropertyListEncoder()
     //        do {

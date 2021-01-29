@@ -23,7 +23,6 @@ class CategoryViewController: SwipeTableViewController {
         super.viewDidLoad()
         
         loadCategories()
-        tableView.rowHeight = 80
     }
     
     func loadCategories() {
@@ -52,7 +51,7 @@ class CategoryViewController: SwipeTableViewController {
     }
     
     //MARK: - delete data from swipe
-    override func updateModel(at indexPath: IndexPath) {
+    override func deleteModel(at indexPath: IndexPath) {
         if let categoryForDeletion = self.categories?[indexPath.row] {
             do {
                 try self.realm.write {
@@ -61,6 +60,38 @@ class CategoryViewController: SwipeTableViewController {
             } catch {
                 print("error deleting category: \(error)")
             }
+            
+        }
+    }
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let categoryForEdition = categories?[indexPath.row] {
+            var textField = UITextField()
+            
+            
+            let alert = UIAlertController(title: "Edit category title", message: "", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Edit Category", style: .default) { (action) in
+                
+                do {
+                    try self.realm.write {
+                        categoryForEdition.name = textField.text!
+                    }
+                } catch {
+                    print("Edit category fail:\(error)")
+                }
+                
+                
+                self.tableView.reloadData()
+            }
+            
+            alert.addTextField { (alertTextField) in
+                alertTextField.text = categoryForEdition.name
+                
+                textField = alertTextField
+            }
+            alert.addAction(action)
+            
+            present(alert, animated: true, completion: nil)
             
         }
     }
